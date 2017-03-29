@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>超赛体育</title>
+  <title>gulp测试</title>
   <link rel="stylesheet" href="./css/base.css">
 
 
@@ -11,18 +11,18 @@
 </head>
 <body>
   <div id="app">
-    <span v-bind:title='tit'>最强模版引擎-有预习力推{{msg}}</span>
-    <ul>
+    <span v-bind:title='tit'>渐进增量的模版引擎-{{msg}}</span>
+    <ol>
       <li v-for='it in item'>{{it}}</li>
-    </ul>
+    </ol>
   </div>
   <div class="app3">
     <ul v-if='seen'>
-      <li v-for="(value ,key,index) in item">{{value}},{{key}},{{index}}</li>
+      <li v-for="(value ,key,index) in item">{{index+1}} - {{value}} => {{key}}</li>
     </ul>
     <side v-bind:tode='msg | canvans("react不服")'></side>
-    <button v-on:click='jump'>逆转未来</button>
-    <input type="text" name="" id="" v-model.lazy='msg'>
+    <button v-on:click='jump'>点我试试看</button>
+    <input type="text" name="" id="" v-model.lazy='msg' placeholder="请输入">
     <p class="caa">{{msg}}</p>
   </div>
   <script src='./lib/vue.js'></script>
